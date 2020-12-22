@@ -4,11 +4,33 @@
   "description": "Vetala Home Page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode-development",
+    "build": "webpack --mode-production"
   },
   "keywords": [
-    "home-page"
+    "homepage"
   ],
   "author": "vetala",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "autoprefixer": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "codyhouse-framework": "^2.8.4",
+    "css-loader": "^5.0.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "node-sass": "^5.0.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "postcss-calc": "^7.0.5",
+    "postcss-css-variables": "git+https://github.com/CodyHouse/postcss-css-variables",
+    "postcss-loader": "^4.1.0",
+    "sass-loader": "^10.1.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-merge-and-include-globally": "^2.1.26"
+  }
 }
