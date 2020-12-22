@@ -1,4 +1,5 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const sassGlobImporter = require('node-sass-glob-importer');
 const mergeJS = require('webpack-merge-and-include-globally');
 
@@ -28,7 +29,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/css/[name].css',
+              name: 'libs/css/[name].css',
             }
           },
           {
@@ -60,11 +61,14 @@ module.exports = {
     ]
   },
   plugins: [
+    new HTMLWebpackPlugin({
+      template: "templates/template.html"
+    }),
     new mergeJS({
       files: {
         "ui.js": [
-          'src/assets/js/util.js',
-          'src/assets/js/components/**/*.js',
+          'src/libs/js/util.js',
+          'src/libs/js/components/**/*.js',
         ]
       }
     }),
